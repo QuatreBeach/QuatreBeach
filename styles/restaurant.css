@@ -1,0 +1,143 @@
+#pagina-restaurant #welkom-wrapper {
+	background-image: url('/images/achtergronden/restaurant.jpg');
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 3em;
+}
+
+.menu-grid article {
+    height: 25vh;
+    border-radius: 25px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Belangrijk om het pseudo-element goed te positioneren */
+    overflow: hidden;
+    /* Zorgt ervoor dat alles binnen het artikel blijft */
+    transition: scale 0.5s ease, box-shadow 0.5s ease;
+}
+
+.menu-grid.reserveergrid article {
+    height: 30vh;
+}
+
+.menu-grid article::before {
+    content: "";
+    /* Zorgt ervoor dat het pseudo-element zichtbaar is */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(89, 42, 3, 0.281);
+    /* Zwart met 50% transparantie */
+    border-radius: 25px;
+    /* Zelfde radius als je article om consistentie te behouden */
+    pointer-events: none;
+    /* Zorgt ervoor dat het pseudo-element geen invloed heeft op interacties */
+    z-index: 1;
+    /* Zorgt ervoor dat het pseudo-element bovenop de afbeelding ligt */
+}
+
+.menu-grid article>* {
+    position: relative;
+    z-index: 2;
+    /* Zorgt ervoor dat de inhoud boven de zwarte waas ligt */
+}
+
+.menu-grid article:hover {
+    scale: 1.03;
+    box-shadow: 0 2px 10px var(--groen);
+    cursor: pointer;
+}
+
+.menu-grid article:hover .button-beige2 {
+    background-color: var(--hover-bg);
+    scale: 1.05;
+}
+
+.menu-grid h3 {
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--beige);
+}
+
+.menu-grid p {
+    color: var(--beige);
+    font-size: 16px;
+}
+
+.menu-grid a:nth-of-type(1) article {
+    background-image: url('/images/achtergronden/lunch.jpg');
+}
+
+.menu-grid a:nth-of-type(2) article {
+    background-image: url('/images/achtergronden/diner.jpg');
+}
+
+.menu-grid a:nth-of-type(3) article {
+    background-image: url('/images/achtergronden/borrel.jpg');
+}
+
+.menu-grid a:nth-of-type(1) {
+    animation: grow 2s ease-in-out;
+    animation-delay: 2s;
+}
+
+.menu-grid a:nth-of-type(2) {
+    animation: grow 2s ease-in-out;
+    animation-delay: 2.5s;
+}
+
+.menu-grid a:nth-of-type(3) {
+    animation: grow 2s ease-in-out;
+    animation-delay: 3s;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2em;
+    }
+}
+
+.menu-grid.reserveergrid a:nth-of-type(1) article {
+    background-image: url('/images/achtergronden/reservering.jpg');
+    background-size: 150%;
+    background-position: 30% 40%;
+    ;
+}
+
+.menu-grid.reserveergrid a:nth-of-type(2) article {
+    background-image: url('/images/achtergronden/groepsreservering.jpg');
+}
+
+
+@keyframes pulse2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-animation {
+    animation: pulse2 1s ease-in-out;
+}

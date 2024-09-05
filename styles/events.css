@@ -1,0 +1,207 @@
+#pagina-agenda #welkom-wrapper {
+	background-image: url('/images/achtergronden/evenementen-teaser.jpg');
+}
+
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.event-date-time {
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    color: var(--goud);
+}
+
+
+.event {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--achtergrond);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px #17333039;
+    transition: scale 0.25s ease-in-out;
+}
+
+
+.event:hover {
+    scale: 1.01;
+}
+
+#events-home .event {
+    flex-direction: row;
+    max-width: 1100px;
+}
+
+.event-image {
+    width: 100%;
+    /* De afbeeldingcontainer neemt altijd de volledige breedte in */
+    max-height: 300px;
+    /* Maximale hoogte van 300px */
+    overflow: hidden;
+    /* Verberg alles buiten de container */
+}
+
+.event .event-image img {
+    width: 100%;
+    /* Afbeelding vult de volledige breedte van de container */
+    height: 100%;
+    /* Zorgt ervoor dat de afbeelding ook de volledige hoogte gebruikt */
+    object-fit: cover;
+    /* Zorgt ervoor dat de afbeelding het frame vult zonder vervorming */
+    object-position: center;
+    /* Zorgt ervoor dat het midden van de afbeelding wordt getoond bij het croppen */
+    display: block;
+    /* Voorkomt ongewenste whitespace onder de afbeelding */
+}
+
+
+
+.event-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Zorgt ervoor dat de reserveringsknop onderaan blijft */
+    padding: 15px;
+    flex-grow: 1;
+    /* Voeg deze regel toe */
+}
+
+
+.now-live {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--groen);
+    background-color: rgba(0, 128, 0, 0.243);
+    padding: 0.1em;
+    padding-left: 0.5em;
+    border-radius: 5px;
+    max-width: 100px;
+    font-family: "Merriweather", serif;
+    font-size: 14px;
+}
+
+.now-live .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--groen);
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: pulse 1.5s infinite;
+    /* Pulsatie animatie */
+}
+
+/* Animatie voor de puls */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.event-date-time {
+    margin: 5px 0;
+}
+
+.event-description {
+    margin: 10px 0;
+    color: var(--tekst-donker);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* Voeg deze regel toe */
+    -webkit-line-clamp: 20;
+    /* Aantal regels om weer te geven */
+    -webkit-box-orient: vertical;
+    /* Voeg deze regel toe */
+    margin-bottom: 1.5em;
+    word-wrap: break-word;
+    /* Tekst afbreken als het te lang is */
+    overflow-wrap: break-word;
+    /* Alternatieve manier om tekst af te breken */
+    word-break: break-word;
+    /* Breek woorden die te lang zijn */
+    hyphens: auto;
+    /* Voeg koppeltekens toe waar mogelijk */
+    max-width: 95%;
+}
+
+#events-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+#events-sections h2 {
+    margin-bottom: 0.25em;
+    font-size: 30px;
+}
+
+#today-events .event {
+    flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+
+    #today-events .event,
+    #events-home .event {
+        grid-column: unset;
+        flex-direction: column;
+    }
+
+
+}
+
+@media screen and (min-width: 800px) {
+    
+    #today-events .events-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        gap: 2em;
+    }
+
+}
+
+
+
+#geen-events a {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: var(--goud) 2px solid;
+    transition: scale 0.5s ease, box-shadow 0.5s ease;
+    margin-top: 0.5em;
+}
+
+#geen-events a:hover {
+    scale: 1.01;
+    cursor: pointer;
+}
+
+#geen-events p {
+    text-align: center;
+    max-width: 500px;
+}
+
+.agenda-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

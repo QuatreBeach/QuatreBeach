@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+
+
+
+/* //////////////////////////
+	VARIABELEN 
+////////////////////////// */
+:root {
+	--achtergrond: var(--beige);
+	--achtergrond-tint: rgba(255, 255, 255, 0.946);
+	--h-zwart: black;
+	--h3-kleur: blue;
+	--h3-kleur-donker: magenta;
+
+	--h3-kleur-port: #57C4F2;
+	--h3-kleur-donker-port: #ffffff;
+
+	--grid-kleur: white;
+	--grid-shadow: #ff972ea7;
+	--grid-p: #0071e3;
+
+	--goud: #D4AF37;
+	--bruin: #C9932E;
+	--groen: #173330;
+	--beige: #FFF4E0;
+	--rood: #BA5737;
+	--wit: white;
+
+	--font-tekst: 14px;
+
+	--hover-bg: rgba(245, 245, 220, 0.255);
+
+}
+
+
+/* //////////////////////////
+	FONTS 
+////////////////////////// */
+
+
+
+p {
+	font-family: "Montserrat", sans-serif;
+	font-size: var(--font-tekst);
+}
+
+h1 {
+	font-family: "Merriweather", serif;
+	font-size: 60px;
+	color: var(--goud);
+}
+
+h2 {
+	font-family: "Merriweather", serif;
+	font-size: 40px;
+	color: var(--tekst-donker);
+}
+
+h3 {
+	font-family: "Merriweather", serif;
+	font-size: 25px;
+	color: var(--groen);
+}
+
+h4 {
+	font-family: "Merriweather", serif;
+	font-size: 25px;
+	color: var(--groen);
+}
+
+/* //////////////////////////
+	BODY 
+////////////////////////// */
+
+
+body>main>section,
+body>footer>section {
+	max-width: 1600px;
+	margin: auto;
+	padding: 4em 4em 4em 4em;
+}
+
+section>h2 {
+	margin: 0.25em 0 0.25em 0;
+}
+
+section > h3,
+section > div h3 {
+	margin: 0 0 0.5em 0;
+}
+
+body {
+	background: linear-gradient(to bottom, var(--achtergrond), white);
+	transition: padding 1s ease;
+
+}
+
+
+/* //////////////////////////
+	BUTTONS 
+////////////////////////// */
+
+
+.reserve-button {
+	display: inline-block;
+	padding: 10px 20px;
+	color: var(--goud);
+	text-decoration: none;
+	border-radius: 50px;
+	text-align: center;
+	border: var(--goud) 2px solid;
+	transition: transform 0.25s ease-in-out, border-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.reserve-button:hover {
+	border-color: var(--groen);
+	color: var(--groen);
+	transform: scale(1.025);
+	/* Vergroot de knop met 10% bij hover */
+}
+
+@keyframes hithere {
+
+	0%,
+	100% {
+		transform: scale(1);
+		border-color: initial;
+	}
+
+	30% {
+		transform: scale(1.2);
+		border-color: var(--goud);
+	}
+
+	40%,
+	60% {
+		transform: rotate(-3deg) scale(1.1);
+		border-color: initial;
+	}
+
+	50% {
+		transform: rotate(3deg) scale(1.1);
+		border-color: var(--goud);
+	}
+
+	70% {
+		transform: rotate(0deg) scale(1.1);
+		border-color: initial;
+	}
+}
+
+@keyframes grow {
+
+	50% {
+		scale: 1.025;
+	}
+}
+
+a {
+	text-decoration: none;
+	/* Verwijdert de onderstreping van de link */
+	color: inherit;
+	/* Laat de kleur van de link overnemen van de omringende tekst */
+	font-weight: normal;
+	/* Zorgt ervoor dat de tekst niet vetgedrukt is (optioneel) */
+}
+
+
+.button-beige {
+	display: inline-block;
+	padding: 5px 30px;
+	color: var(--beige);
+	text-decoration: none;
+	border-radius: 50px;
+	text-align: center;
+	border: var(--beige) 2px solid;
+	transition: scale 0.25s ease-in-out, background-color 0.25s ease;
+	animation: hithere 2s ease-in-out;
+	animation-delay: 10s;
+}
+
+.button-beige button {
+	font-size: 14px;
+}
+
+.button-beige:hover {
+	background-color: var(--hover-bg);
+	scale: 1.05;
+}
+
+
+.button-welkom {
+	display: inline-block;
+	padding: 15px 75px;
+	color: var(--beige);
+	text-decoration: none;
+	border-radius: 50px;
+	text-align: center;
+	border: var(--beige) 2px solid;
+	transition: scale 0.25s ease-in-out, background-color 0.25s ease;
+}
+
+.button-welkom button {
+	font-size: 20px;
+}
+
+.button-welkom:hover {
+	background-color: var(--hover-bg);
+	scale: 1.05;
+}
+
+
+.button-groen {
+	display: inline-block;
+	padding: 10px 50px;
+	color: var(--groen);
+	text-decoration: none;
+	border-radius: 50px;
+	text-align: center;
+	border: var(--groen) 2px solid;
+	transition: scale 0.25s ease-in-out, background-color 0.25s ease, color 0.25s ease;
+}
+
+.button-groen button {
+	font-size: 14px;
+}
+
+.button-groen:hover {
+	background-color: var(--groen);
+	color: var(--beige);
+}
+
+.button-mobile {
+	display: none;
+	justify-content: center;
+}
+
+.button-desktop {
+	display: none;
+}
+
+
+
+
+button {
+	all: unset;
+	display: inline-block;
+	/* Zorgt ervoor dat de knop als een inline-block wordt weergegeven */
+	cursor: pointer;
+	/* Zorgt ervoor dat de cursor verandert wanneer je over de knop beweegt */
+}
+
+button {
+	font-family: "Merriweather", serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+
+/* //////////////////////////
+	WELKOM WRAPPER 
+////////////////////////// */
+
+#welkom-wrapper {
+	position: relative;
+	/* Zorgt ervoor dat het pseudo-element absoluut gepositioneerd kan worden */
+	height: 500px;
+	/* Pas de hoogte aan zoals je wilt */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#welkom-wrapper::before {
+	content: "";
+	/* Maakt het pseudo-element zichtbaar */
+	position: absolute;
+	/* Posiëren ten opzichte van de #welkom-wrapper */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.429), rgba(255, 255, 255, 0) 90%, var(--achtergrond));
+	/* De aangepaste gradiënt */
+	z-index: 1;
+	/* Zorgt ervoor dat de gradiënt boven de afbeelding ligt */
+}
+
+#welkom-wrapper>div {
+	position: relative;
+	/* Zorgt ervoor dat de inhoud boven de gradiënt ligt */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+	/* Zorgt ervoor dat de inhoud boven de gradiënt ligt */
+}
+
+#welkom-wrapper p {
+	color: var(--beige);
+	font-size: 20px;
+	font-family: "Merriweather", serif;
+}
+
+
+
+/* TELEFOON */
+
+@media screen and (max-width: 800px) {
+
+	h1 {
+		font-size: 50px;
+	}
+
+	h2 {
+		font-size: 35px;
+	}
+
+	h3 {
+		margin-bottom: 0.25em;
+		font-size: 20px;
+	}
+
+	body>main>section,
+	body>footer>section {
+		padding: 2em 2em 2em 2em;
+	}
+
+
+
+	#welkom-wrapper {
+		height: 50vh;
+	}
+
+	#welkom-wrapper p {
+		font-size: 18px;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.button-mobile {
+		display: flex;
+	}
+
+
+}
+
+
+@media screen and (min-width: 800px) {
+
+	.button-desktop {
+		display: inline;
+	}
+
+
+}
+
+
+
+/* 
+@media (prefers-color-scheme:dark) {
+
+	:root {
+		--achtergrond: rgb(2, 28, 2);
+		--tekst-donker: var(--beige);
+		--h-zwart: white;
+		--h3-kleur-donker: rgb(221, 0, 66);
+		--h3-kleur-port: #bf16fc;
+		--h3-kleur-donker-port: #0b054c;
+
+		--grid-kleur: #000000;
+		--grid-shadow: #ffb3005e;
+
+	}
+
+} */
+
+
+
+
+
+
+
+
+

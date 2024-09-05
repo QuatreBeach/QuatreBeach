@@ -1,0 +1,263 @@
+/* Basisreset voor marges en padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stijlen voor de header */
+.site-header {
+    position: fixed; /* Zorgt ervoor dat de header altijd zichtbaar is */
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff; /* Tekstkleur in de header */
+    padding: 1em; /* Ruimte binnen de header */
+    margin: auto;
+    margin-top: 1em;
+    z-index: 1000; /* Zorgt ervoor dat de header boven andere elementen staat */
+    max-width: 1400px;
+    border-radius: 15px;
+    transition: transform 0.75s ease, opacity 1s ease, background-color 0.5s ease; /* Voeg een overgang toe voor achtergrondkleur */
+}
+
+header img {
+    height: 100%;
+    width: 150px;
+}
+
+header .container {
+    max-width: 95%;
+    margin: 0 auto; /* Centreert de container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.q-links {
+    display: flex;
+    gap: 1em;
+}
+
+header .container-sub-nav {
+    max-width: 90%;
+    margin: 0 auto; /* Centreert de container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: beige solid 1px;
+    padding: 0.25em 1em 0.25em 1em;
+    max-width: 400px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease, scale 0.5s ease;
+}
+
+.site-header h1 {
+    font-size: 24px;
+}
+
+.site-header .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.site-header .container nav ul li a {
+    color: var(--goud);
+    font-family: "Merriweather", sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.5s ease;
+}
+
+.container-sub-nav:hover {
+    background-color: var(--hover-bg);
+    scale: 1.02;
+}
+
+.site-header .sub-nav ul li a:hover {
+    color: var(--goud);
+}
+
+.site-header .container-sub-nav nav ul li a {
+    color: var(--beige);
+    font-family: "Merriweather", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.5s ease;
+}
+
+.site-header nav ul li a:hover {
+    color: var(--beige);
+}
+
+.openingstijden img {
+    width: 35px;
+    height: 100%;
+}
+
+.open {
+    font-size: 12px;
+}
+
+/* Stijlen voor de hamburger-menu */
+.menu-toggle {
+    display: none; /* Verborgen op grotere schermen */
+    cursor: pointer;
+    position: fixed; /* Fixed positioning */
+    top: 30px; /* Ruimte van de bovenkant */
+    right: 30px; /* Ruimte van de rechterkant */
+    z-index: 1100; /* Zorg ervoor dat het boven de sidebar ligt */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--beige); /* Kleur van de lijnen */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger to kruisje animatie */
+.menu-toggle.open span:nth-child(1) {
+    background-color: var(--goud); /* Kleur van de lijnen */
+    transform: rotate(45deg);
+    position: relative;
+    top: 15px;
+    height: 5px;
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    background-color: var(--goud); /* Kleur van de lijnen */
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+    height: 5px;
+}
+
+/* Sidebar menu voor mobiel */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(to bottom, var(--beige), var(--wit));
+    color: #fff;
+    transform: translateX(100%); /* Verborgen rechts buiten het scherm */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000; /* Zorg ervoor dat het bovenop alle andere elementen ligt */
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2em;
+    justify-content: space-around;
+}
+
+.sidebar-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 1em;
+}
+
+.sidebar-nav a {
+    font-family: "Merriweather", serif;
+    font-size: 40px;
+    color: var(--groen);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.sub-li a {
+    margin-left: 0.5em;
+    font-size: 35px;
+}
+
+.sidebar-nav a:hover {
+    color: var(--goud);
+}
+
+.sidebar .button-beige {
+    color: var(--goud);
+    border-color: var(--goud);
+}
+
+.sidebar .button-beige button {
+    font-size: 18px;
+}
+
+.sidebar .open {
+    font-size: 14px;
+}
+
+/* Responsive stijlen */
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: flex; /* Toon de hamburger-knop op kleinere schermen */
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Sidebar zichtbaar bij activeren */
+        opacity: 1;
+    }
+
+    header .container {
+        justify-content: center;
+    }
+
+    .q-links {
+        display: none;
+    }
+}
+
+/* Responsive stijlen */
+@media (min-width: 450px) {
+    .menu-toggle {
+        display: none; /* Toon de hamburger-knop op kleinere schermen */
+    }
+}
+
+/* Responsive stijlen */
+@media (max-width: 450px) {
+    .logo {
+        display: block;
+        
+    }
+
+    .site-header .nav {
+        display: none;
+    }
+
+    header .container-sub-nav {
+        display: none;
+    }
+
+    .site-header {
+        margin-top: 0.5em;
+    }
+}
+

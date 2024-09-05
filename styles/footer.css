@@ -1,0 +1,135 @@
+footer {
+    background-color: var(--beige);
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-row-gap: 5em;
+    width: 100%; /* Zorgt ervoor dat de grid de volledige breedte gebruikt */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 250px;
+}
+
+.footer-items {
+    list-style: none; /* Verwijdert de standaard opsommingstekens */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0; /* Verwijdert eventuele standaard padding */
+    margin: 0; /* Verwijdert eventuele standaard margin */
+}
+
+@media screen and (min-width: 1390px) {
+    .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer-grid {
+        grid-row-gap: 3em;
+        max-width: 500px;
+    }
+
+    .footer-container {
+        max-width: 350px;
+    }
+}
+
+
+footer a {
+    font-family: "Merriweather", serif;
+    position: relative; /* Zorgt ervoor dat de pijl correct gepositioneerd kan worden */
+    padding-right: 0px; /* Zorgt voor voldoende ruimte voor de pijl */
+    transition: color 0.25s ease, scale 0.25s ease;
+    font-size: 18px;
+    font-weight: 600px;
+}
+
+.footer-grid a::after {
+    content: '→'; /* De pijl */
+    position: absolute;
+    right: 0px; /* Zorgt ervoor dat de pijl goed zichtbaar is aan de rechterkant */
+    top: 50%; /* Centreert de pijl verticaal */
+    transform: translateY(-50%); /* Corrigeert de verticale centrering */
+    font-size: 1.2em; /* Grootte van de pijl */
+}
+
+footer a:hover {
+    color: var(--goud);
+    scale: 1.05;
+}
+
+.nieuwsbrief {
+    border: var(--goud) 2px solid;
+    border-radius: 50px;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.nieuwbrief:hover {
+    background-color: var(--hover-bg);
+}
+
+.footer-adres {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 50px;
+    border: var(--beige) 0px solid;
+    transition: border 0.5s ease;
+}
+.footer-adres div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-adres p {
+    font-family: "Merriweather", serif;
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer-adres p:first-of-type {
+    font-weight: bold;
+}
+
+.footer-adres:hover {
+    border: var(--goud) 2px solid;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+}
+
+th, td {
+    padding: 8px 8px 8px 0;
+    text-align: left;
+    border-bottom: 0.5px solid #D4AF37; /* Gouden kleur */
+}
+
+th {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #D4AF37; /* Gouden kleur */
+    font-weight: bold;
+}
+
+footer h3 {
+    margin-top: 0;
+}
