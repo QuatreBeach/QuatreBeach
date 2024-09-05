@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Evenementen | QuatreBeach</title>
+
+	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/header.css" rel="stylesheet">
+	<link href="styles/footer.css" rel="stylesheet">
+	<link href="styles/restaurant.css" rel="stylesheet">
+	<link href="styles/events.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
+
+	<script defer src="scripts/events-home.js"></script>
+	<script defer src="scripts/header.js"></script>
+	<script defer src="scripts/openingstijden.js"></script>
+	<script defer src="scripts/restaurant.js"></script>
+	<script>
+		;
+		(function (d, s, id) {
+			const el = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id) || el.parentNode == null) {
+				return;
+			}
+			var js = d.createElement(s);
+			js.id = id;
+			js.async = true;
+			js.src = 'https://sdk.zenchef.com/v1/sdk.min.js';
+			el.parentNode.insertBefore(js, el);
+		})(document, 'script', 'zenchef-sdk')
+	</script>
+
+	<div class="zc-widget-config" data-restaurant="368690"></div>
+</head>
+
+<body id="pagina-restaurant">
+
+	<header class="site-header">
+		<div class="container">
+			<div class="logo">
+				<img src="images/huisstijl/logo_wit.png" alt="Logo">
+			</div>
+			<div class="nav">
+				<nav>
+					<ul class="nav-main">
+						<li><a href="restaurant.html">Restaurant</a></li>
+						<li><a href="evenementen.html">Evenementen</a></li>
+					</ul>
+				</nav>
+				<div class="container-sub-nav">
+					<div class="sub-nav">
+						<nav>
+							<ul class="nav-sub">
+								<li><a href="agenda.html">Agenda</a></li>
+								<li><a href="evenementen.html">Over ons</a></li>
+								<li><a href="evenementen.html">FAQ</a></li>
+								<li><a href="evenementen.html">Vacatures</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="q-links">
+				<a class="button-beige" data-zc-action="open">
+					<button data-zc-action="open">Reserveren</button>
+					<p id="open-tekst" class="open" data-zc-action="open"></p>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hamburger icon -->
+	<button data-zc-action="close" class="menu-toggle" id="menu-toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<!-- Sidebar menu for mobile -->
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-content">
+			<nav>
+				<ul class="sidebar-nav">
+					<li><a href="restaurant.html">Restaurant</a></li>
+					<li class="sub-li"><a href="agenda.html">Agenda</a></li>
+					<li class="sub-li"><a href="evenementen.html">Over ons</a></li>
+					<li class="sub-li"><a href="evenementen.html">FAQ</a></li>
+					<li class="sub-li"><a href="evenementen.html">Vacatures</a></li>
+					<li><a href="evenementen.html">Evenementen</a></li>
+				</ul>
+			</nav>
+			<a class="button-beige" data-zc-action="open">
+				<button data-zc-action="open">Reserveren</button>
+				<p id="open-tekst" class="open" data-zc-action="open">Geopend</p>
+			</a>
+		</div>
+	</div>
+
+	<main>
+
+
+
+		<div id="welkom-wrapper">
+			<div>
+				<h1>Restaurant</h1>
+				<p id="groet">Maand</p>
+			</div>
+
+		</div>
+
+		<section id="menu">
+
+			<h2>Menu</h2>
+
+			<section class="menu-grid">
+
+			<a href="/assets/Huisregels.pdf" target="_blank">
+				<article>
+					<h3>Lunch</h3>
+					<p>Bekijk Lunchkaart</p>
+				</article>
+			</a>
+
+			<a>
+				<article>
+					<h3>Diner</h3>
+					<p>Bekijk Dinerkaart</p>
+				</article>
+			</a>
+
+			<a>
+				<article>
+					<h3>Borrel</h3>
+					<p>Bekijk Dinerkaart</p>
+				</article>
+			</a>
+
+			</section>
+
+		</section>
+
+
+		<section id="events-home">
+
+			<div class="agenda-flex">
+				<h2>Agenda</h2>
+				<a href="agenda.html" class="button-desktop"><button class="button-groen">Bekijk de volledige
+						agenda</button></a>
+			</div>
+
+			<section id="evenementen" class="onderdeel">
+				<section id="events">
+					<!-- Template voor een evenement -->
+					<template id="event-template">
+						<div class="event">
+							<div class="event-image">
+								<img src="" alt="">
+							</div>
+							<div class="event-text">
+								<div class="now-live" style="display:none;">
+									<span class="dot"></span> Nu bezig
+								</div>
+								<div>
+									<h4></h4>
+									<p class="event-date-time"></p>
+									<p class="event-description"></p>
+								</div>
+								<a class="reserve-button" data-zc-action="open"><button
+										data-zc-action="open">Reserveren</button></a>
+							</div>
+						</div>
+					</template>
+
+					<div id="events-sections">
+						<section id="today-events">
+							<h3 id="maand3">Eerstvolgende</h3>
+							<div class="events-list"></div> <!-- Nieuwe div voor evenementen van vandaag -->
+						</section>
+						<a href="index.html" class="button-mobile"><button class="button-groen">Bekijk de volledige
+								agenda</button></a>
+					</div>
+
+					<div id="geen-events">
+						<h3 id="maand3">Geen geplande evenementen</h3>
+						<a href="index.html">
+							<h4>Kom later terug</h4>
+							<p>Momenteen staan er geen evenementen op de planning. Houd onze Insta & Facebook in de
+								gaten voor de laatste nieuwtjes.</p>
+						</a>
+					</div>
+
+				</section>
+			</section>
+			</section>
+
+
+			<section id="menu">
+
+				<div>
+				<h2>Reserveren</h2>
+				<h3 id="open-tekst2">Test</h3>
+			</div>
+	
+				<section class="menu-grid reserveergrid">
+
+					<a id="reserveren-link">
+						<article data-zc-action="open">
+						  <h3>Reserveren</h3>
+						  <p id="reserveren-tekst">Groepen tot 16 personen</p>
+						</article>
+					  </a>
+					  
+	
+				<a href="index.html">
+					<article>
+						<h3>Groepsreservering</h3>
+						<p>Groepen groter dan 16 personen</p>
+					</article>
+				</a>
+	
+				</section>
+	
+			</section>
+
+
+
+
+
+
+
+	</main>
+
+	<footer>
+
+		<section class="footer-grid">
+
+			<div class="footer-container">
+				<h3>Contact</h3>
+				<div class="footer-items">
+					<a href="tel:+31615665570">Bellen</a>
+					<a href="mailto:info@quatrebeach.nl">Mailen</a>
+					<a>Evenementen</a>
+				</div>
+			</div>
+
+			<div class="footer-container">
+				<h3>Informatie</h3>
+				<div class="footer-items">
+					<a data-zc-action="open">Reserveren</a>
+					<a href="mailto:info@quatrebeach.nl">Agenda</a>
+					<a href="assets/Huisregels.pdf" target="_blank">Huisregels</a>
+					<a href="https://www.google.com/maps/dir//Akerdijk+12,+1175+LE+Lijnden/@52.3532997,4.6787458,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c5e1588099d001:0x61fc816d3855c609!2m2!1d4.761146!2d52.3533284?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+						target="_blank">Route</a>
+				</div>
+			</div>
+
+			<div class="footer-container">
+				<h3>Over</h3>
+				<div class="footer-items">
+					<a>Ons verhaal</a>
+					<a href="mailto:info@quatrebeach.nl">Impressie</a>
+					<a>Review</a>
+					<a>Vacatures</a>
+				</div>
+			</div>
+
+			<div class="footer-container">
+				<h3>Openingstijden</h3>
+				<table id="openingstijden-footer">
+					<tbody>
+						<tr>
+							<td>Zondag</td>
+							<td>10:00 - 23:00</td>
+						</tr>
+						<tr>
+							<td>Maandag</td>
+							<td>Gesloten</td>
+						</tr>
+						<tr>
+							<td>Dinsdag</td>
+							<td>10:00 - 00:00</td>
+						</tr>
+						<tr>
+							<td>Woensdag</td>
+							<td>10:00 - 00:00</td>
+						</tr>
+						<tr>
+							<td>Donderdag</td>
+							<td>10:00 - 00:00</td>
+						</tr>
+						<tr>
+							<td>Vrijdag</td>
+							<td>10:00 - 01:00</td>
+						</tr>
+						<tr>
+							<td>Zaterdag</td>
+							<td>10:00 - 01:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="footer-container">
+				<h3>Nieuwsbrief</h3>
+				<div class="footer-items">
+					<a href="https://qbeach.us20.list-manage.com/subscribe?u=d6da4ecf1da66e68a435185a6&id=3a581b6568"
+						target="_blank" class="nieuwsbrief">Aanmelden</a>
+				</div>
+			</div>
+
+
+		</section>
+
+		<div class="footer-adres">
+			<div>
+				<a href="https://www.google.com/maps/dir//Akerdijk+12,+1175+LE+Lijnden/@52.3532997,4.6787458,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c5e1588099d001:0x61fc816d3855c609!2m2!1d4.761146!2d52.3533284?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+					target="_blank">
+					<p>Akerdijk 12</p>
+					<p>1175 LE Lijnden</p>
+				</a>
+			</div>
+		</div>
+
+
+	</footer>
+
+
+
+	<p id="maand">Maand</p>
+	<p id="groet">Maand</p>
+	<p id="groet-welkom">Maand</p>
+	<p id="maand2">Maand</p>
+	<p id="agenda">Maand</p>
+
+
+
+
+
+</body>
+
+</html>
