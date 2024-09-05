@@ -36,7 +36,7 @@
 }
 
 .overlay-text .menu-grid.reserveergrid a:nth-of-type(1) article {
-  background-image: url('/images/achtergronden/restaurant-teaser.jpg');
+  background-image: url('../images/achtergronden/restaurant-teaser.jpg');
   background-size: 100%;
   background-position: unset;
   ;
