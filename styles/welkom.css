@@ -43,7 +43,7 @@
 }
 
 .overlay-text .menu-grid.reserveergrid a:nth-of-type(2) article {
-  background-image: url('/images/achtergronden/evenementen-teaser.jpg');
+  background-image: url('../images/achtergronden/evenementen-teaser.jpg');
 }
 
 h1 {
