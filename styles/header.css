@@ -16,9 +16,18 @@
     margin: auto;
     margin-top: 1em;
     z-index: 1000; /* Zorgt ervoor dat de header boven andere elementen staat */
-    max-width: 1400px;
+    max-width: 97vw;
     border-radius: 15px;
     transition: transform 0.75s ease, opacity 1s ease, background-color 0.5s ease; /* Voeg een overgang toe voor achtergrondkleur */
+
+}
+
+@media (min-width: 1600px) {
+    .site-header {
+
+        max-width: 1600px;
+    
+    }
 }
 
 header img {
@@ -27,7 +36,7 @@ header img {
 }
 
 header .container {
-    max-width: 95%;
+    max-width: calc(1600px - 8em);
     margin: 0 auto; /* Centreert de container */
     display: flex;
     align-items: center;
@@ -213,6 +222,20 @@ header .container-sub-nav {
 .sidebar .open {
     font-size: 14px;
 }
+
+#sidebar #current-page {
+    background: radial-gradient(circle, var(--goud), var(--bruin));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-decoration: underline;
+}
+
+.sub-nav #current-page {
+    text-decoration: underline;
+}
+
 
 /* Responsive stijlen */
 @media (max-width: 800px) {

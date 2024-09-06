@@ -38,7 +38,6 @@
 .event-image {
     width: 100%;
     /* De afbeeldingcontainer neemt altijd de volledige breedte in */
-    max-height: 300px;
     /* Maximale hoogte van 300px */
     overflow: hidden;
     /* Verberg alles buiten de container */
@@ -67,6 +66,10 @@
     padding: 15px;
     flex-grow: 1;
     /* Voeg deze regel toe */
+}
+
+#today-events .event-text {
+    width: 100%;
 }
 
 
@@ -170,7 +173,7 @@
     
     #today-events .events-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         gap: 2em;
     }
 
