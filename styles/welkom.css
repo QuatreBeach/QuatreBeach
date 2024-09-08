@@ -54,6 +54,7 @@ h1 {
 
 h2 {
   font-size: 30px;
+  color: var(--beige);
   /* text-align: left; */
 }
 
@@ -95,3 +96,4 @@ h2 {
 #groet-welkom {
   animation: hithere 1.5s ease-in-out;
 }
+
