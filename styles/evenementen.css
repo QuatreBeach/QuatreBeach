@@ -32,7 +32,7 @@
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     text-align: left;
     overflow: auto; /* Zorgt ervoor dat de inhoud scrollbaar is */
-    max-height: 90vh; /* Max hoogte om te voorkomen dat het scherm wordt overspoeld */
+    max-height: 80vh; /* Max hoogte om te voorkomen dat het scherm wordt overspoeld */
 }
 
   
