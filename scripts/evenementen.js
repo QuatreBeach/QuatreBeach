@@ -83,7 +83,7 @@ function openOverlay(title, description, capacity) {
 
   // Laad de afbeeldingen dynamisch uit de map
   const imageFolderPath = `images/evenementen/${encodeURIComponent(title)}/`;
-  const numberOfImages = 10; // Probeer 5 afbeeldingen te laden
+  const numberOfImages = 5; // Probeer 5 afbeeldingen te laden
 
   for (let i = 1; i <= numberOfImages; i++) {
     const imgSrc = `${imageFolderPath}image${i}.jpeg`;
@@ -98,8 +98,10 @@ function openOverlay(title, description, capacity) {
     overlayFotos.appendChild(img);
   }
 
-  // Verberg het #menu-toggle element wanneer de overlay wordt geopend
-  document.getElementById('menu-toggle').style.display = 'none';
+  // Verberg het #menu-toggle element wanneer de overlay wordt geopend op schermen kleiner dan 450px
+  if (window.innerWidth < 450) {
+    document.getElementById('menu-toggle').style.display = 'none';
+  }
 
   // Toon de overlay
   const overlay = document.getElementById('overlay');
@@ -118,8 +120,10 @@ function closeOverlay(event) {
   overlayContent.classList.remove('show');
   overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
   
-  // Toon het #menu-toggle element weer wanneer de overlay wordt gesloten
-  document.getElementById('menu-toggle').style.display = 'flex';
+  // Toon het #menu-toggle element weer wanneer de overlay wordt gesloten, maar alleen op schermen kleiner dan 450px
+  if (window.innerWidth < 450) {
+    document.getElementById('menu-toggle').style.display = 'flex';
+  }
 
   setTimeout(() => {
     overlay.style.display = 'none';
