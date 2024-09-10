@@ -4,24 +4,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Evenementen | QuatreBeach</title>
+	<title>Veelgestelde Vragen | QuatreBeach Lijnden</title>
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/header.css" rel="stylesheet">
 	<link href="styles/footer.css" rel="stylesheet">
-	<link href="styles/restaurant.css" rel="stylesheet">
-	<link href="styles/evenementen.css" rel="stylesheet">
+	<link href="styles/faq.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
 
 	<script defer src="scripts/script.js"></script>
 	<script defer src="scripts/header.js"></script>
 	<script defer src="scripts/openingstijden.js"></script>
-	<script defer src="scripts/evenementen.js"></script>
+	<script defer src="scripts/faq.js"></script>
 
 	<div class="zc-widget-config" data-restaurant="368690"></div>
 </head>
 
-<body id="pagina-evenementen">
+<body id="pagina-faq">
 
 	<header class="site-header">
 		<div class="container">
@@ -40,7 +39,7 @@
 						<nav>
 							<ul class="nav-sub">
 								<li><a href="agenda.html">Agenda</a></li>
-								<li><a href="over-ons.html">Over ons</a></li>
+								<li><a id="current-page" href="over-ons.html">Over ons</a></li>
 								<li><a href="faq.html">FAQ</a></li>
 								<li><a href="vacatures.html">Vacatures</a></li>
 							</ul>
@@ -71,10 +70,10 @@
 				<ul class="sidebar-nav">
 					<li><a href="restaurant.html">Restaurant</a></li>
 					<li class="sub-li"><a href="agenda.html">Agenda</a></li>
-					<li class="sub-li"><a href="over-ons.html">Over ons</a></li>
+					<li id="current-page" class="sub-li"><a href="over-ons.html">Over ons</a></li>
 					<li class="sub-li"><a href="faq.html">FAQ</a></li>
 					<li class="sub-li"><a href="vacatures.html">Vacatures</a></li>
-					<li id="current-page"><a href="evenementen.html">Evenementen</a></li>
+					<li><a href="evenementen.html">Evenementen</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -86,63 +85,30 @@
 
 		<div id="welkom-wrapper">
 			<div>
-				<h1>Evenementen</h1>
-				<p id="groet">Welkom</p>
+				<h1>FAQ</h1>
+				<p>Antwoord op jouw vraag</p>
 			</div>
 
 		</div>
 
-		<section id="event-roller">
+		<section>
+			<h2>Veelgestelde vragen</h2>
 
-		<div class="event-roller">
-			<h2 class="sentence"><span class="break1">Organiseer jouw</span> <span class="word-wrapper"><span id="rotating-word" class="word">evenement</span></span><br> in het hart van Lijnden</h2>
-		</div>
-
-		<p>Bij QuatreBeach geloven we dat elk moment speciaal is en verdient om gevierd te worden. Wij zijn daarom de ideale locatie voor jouw evenement, of het nu gaat om een intieme bijeenkomst of een groot feest. QuatreBeach biedt een unieke en veelzijdige setting, zowel binnen als op het prachtige terras, waar je de perfecte ambiance kunt creëren voor jouw speciale gelegenheid.
-
-			Bij QuatreBeach begrijpen we dat elk evenement uniek is. Daarom bieden we aangepaste arrangementen om aan jouw specifieke wensen te voldoen. Samen met jou kunnen we op maat gemaakte evenementen organiseren en een onvergetelijke ervaring verzorgen.</p>
+		<section class="faq" id="faq-container">
+			<!-- FAQ items zullen hier worden ingevoegd -->
+		</section>
 
 	</section>
+	
+	</svg>
+		
 
-		<section id="evenementen" class="onderdeel">
+		
 
-			<section id="menu">
+	
+		
 
-				<h2>Ruimtes</h2>
-				<h3>Bekijk diverse ruimtes voor jouw event</h3>
 
-				<section class="menu-grid">
-					<!-- Dynamische inhoud wordt hier toegevoegd via JavaScript -->
-				  </section>
-				  
-				  <!-- Overlay HTML -->
-				  <div id="overlay" class="overlay" onclick="closeOverlay(event)">
-					<div class="overlay-content" onclick="event.stopPropagation()">
-				  
-					  <div class="overlay-title">
-						<div>
-						  <h3 id="overlay-title"></h3>
-						  <p id="overlay-capacity"></p>
-						</div>
-						<div class="overlay-buttons">
-						  <a href="mailto:evenementen@quatrebeach.nl" class="button-groen"><button>Neem contact op</button></a>
-						  <a class="button-groen"><button>Download Brochure</button></a>
-						  <span class="close-btn" onclick="closeOverlay()">&times;</span>
-						</div>
-					  </div>
-					  <h3>Over deze ruimte</h3>
-					  <p id="overlay-description"></p>
-				  
-					  <h3>Foto's</h3>
-					  <div class="overlay-fotos" id="overlay-fotos">
-						<!-- Dynamische foto's en carousel komen hier -->
-					  </div>
-					</div>
-				  </div>
-				  
-				  
-
-		</section>
 
 	</main>
 

@@ -76,6 +76,17 @@ document.getElementById("maand3").textContent = `Eerstvolgende in ${monthName}`;
 
 // Openingstijden agenda
 const openingHours = [
+
+        // Zondag
+        [
+            { start: '00:00', end: '00:59', message: 'Gaat zo sluiten om 01:00' },
+            { start: '01:00', end: '08:59', message: 'Open vanaf 10:00' },
+            { start: '09:00', end: '09:59', message: 'Gaat zo open om 10:00' },
+            { start: '10:00', end: '21:59', message: 'Nu geopend tot 23:00' },
+            { start: '22:00', end: '22:59', message: 'Gaat zo sluiten om 23:00' },
+            { start: '23:00', end: '23:59', message: 'Nu gesloten' }
+        ],
+        
     // Maandag
     [{ start: '00:00', end: '23:59', message: 'Vandaag gesloten' }],
     // Dinsdag
@@ -111,15 +122,6 @@ const openingHours = [
         { start: '01:00', end: '08:59', message: 'Open vanaf 10:00' },
         { start: '09:00', end: '09:59', message: 'Gaat zo open om 10:00' },
         { start: '10:00', end: '23:59', message: 'Nu geopend tot 01:00' }
-    ],
-    // Zondag
-    [
-        { start: '00:00', end: '00:59', message: 'Gaat zo sluiten om 01:00' },
-        { start: '01:00', end: '08:59', message: 'Open vanaf 10:00' },
-        { start: '09:00', end: '09:59', message: 'Gaat zo open om 10:00' },
-        { start: '10:00', end: '21:59', message: 'Nu geopend tot 23:00' },
-        { start: '22:00', end: '22:59', message: 'Gaat zo sluiten om 23:00' },
-        { start: '23:00', end: '23:59', message: 'Nu gesloten' }
     ]
 ];
 

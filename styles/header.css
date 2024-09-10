@@ -35,6 +35,15 @@ header img {
     width: 150px;
 }
 
+.logo {
+    transition: scale 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    scale: 1.05;
+    transform: rotate(-5deg);
+}
+
 header .container {
     max-width: calc(1600px - 8em);
     margin: 0 auto; /* Centreert de container */

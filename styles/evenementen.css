@@ -145,3 +145,76 @@
 
 
   
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+#event-roller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+#event-roller p {
+    max-width: 800px;
+}
+
+.sentence {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.word-wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 1.75em;
+    transition: width 0.5s ease-in-out; /* Smooth transition for width */
+}
+
+.word {
+    display: inline-block;
+    color: #718355;
+    background-color: rgba(15, 159, 44, 0.1); /* Light background color */
+    border-radius: 50px;
+    padding: 0.25em 0.5em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideUp 2s infinite;
+    white-space: nowrap;
+    transition: width 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    25% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .break1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}

@@ -13,71 +13,71 @@
 	<link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
 
 	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/agenda.js"></script>
 	<script defer src="scripts/header.js"></script>
 	<script defer src="scripts/openingstijden.js"></script>
-	<script>;(function (d, s, id) {const el = d.getElementsByTagName(s)[0]; if (d.getElementById(id) || el.parentNode == null) {return;} var js = d.createElement(s);  js.id = id; js.async = true; js.src = 'https://sdk.zenchef.com/v1/sdk.min.js';  el.parentNode.insertBefore(js, el); })(document, 'script', 'zenchef-sdk')</script>
 
 	<div class="zc-widget-config" data-restaurant="368690"></div>
 </head>
 
 <body id="pagina-agenda">
 
-<header class="site-header">
-	<div class="container">
-		<div class="logo">
-			<img src="images/huisstijl/logo_wit.png" alt="Logo">
+	<header class="site-header">
+		<div class="container">
+			<a class="logo" href="index.html">
+				<img src="images/huisstijl/logo_wit.png" alt="Logo">
+			</a>
+			<div class="nav">
+				<nav>
+					<ul class="nav-main">
+						<li><a href="restaurant.html">Restaurant</a></li>
+						<li><a href="evenementen.html">Evenementen</a></li>
+					</ul>
+				</nav>
+				<div class="container-sub-nav">
+					<div class="sub-nav">
+						<nav>
+							<ul class="nav-sub">
+								<li><a id="current-page" href="agenda.html">Agenda</a></li>
+								<li><a href="over-ons.html">Over ons</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="vacatures.html">Vacatures</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="q-links">
+				<a class="button-beige" data-zc-action="open">
+					<button data-zc-action="open">Reserveren</button>
+					<p id="open-tekst" class="open" data-zc-action="open">Reserveer een tafel</p>
+				</a>
+			</div>
 		</div>
-		<div class="nav">
+	</header>
+
+	<!-- Hamburger icon -->
+	<button data-zc-action="close" class="menu-toggle" id="menu-toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<!-- Sidebar menu for mobile -->
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-content">
 			<nav>
-				<ul class="nav-main">
+				<ul class="sidebar-nav">
 					<li><a href="restaurant.html">Restaurant</a></li>
+					<li id="current-page" class="sub-li"><a href="agenda.html">Agenda</a></li>
+					<li class="sub-li"><a href="over-ons.html">Over ons</a></li>
+					<li class="sub-li"><a href="faq.html">FAQ</a></li>
+					<li class="sub-li"><a href="vacatures.html">Vacatures</a></li>
 					<li><a href="evenementen.html">Evenementen</a></li>
 				</ul>
 			</nav>
-			<div class="container-sub-nav">
-				<div class="sub-nav">
-					<nav>
-						<ul class="nav-sub">
-							<li><a id="current-page" href="agenda.html">Agenda</a></li>
-							<li><a href="evenementen.html">Over ons</a></li>
-							<li><a href="evenementen.html">FAQ</a></li>
-							<li><a href="evenementen.html">Vacatures</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-		<div class="q-links">
-			<a class="button-beige" data-zc-action="open">
-				<button data-zc-action="open">Reserveren</button>
-				<p id="open-tekst" class="open" data-zc-action="open">Geopend tot 10:00</p>
-			</a>
 		</div>
 	</div>
-</header>
-
-    <!-- Hamburger icon -->
-    <button data-zc-action="close" class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-	</button>
-
-    <!-- Sidebar menu for mobile -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-content">
-            <nav>
-                <ul class="sidebar-nav">
-                    <li><a href="restaurant.html">Restaurant</a></li>
-					<li id="current-page" class="sub-li"><a href="agenda.html">Agenda</a></li>
-                    <li class="sub-li"><a href="evenementen.html">Over ons</a></li>
-                    <li class="sub-li"><a href="evenementen.html">FAQ</a></li>
-                    <li class="sub-li"><a href="evenementen.html">Vacatures</a></li>
-                    <li><a href="evenementen.html">Evenementen</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
 
 	<main>
 

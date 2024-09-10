@@ -1,0 +1,89 @@
+#pagina-faq #welkom-wrapper {
+	background-image: url('../images/achtergronden/evenementen-teaser.jpg');
+}
+
+.faq h3 {
+    font-weight: 400;
+}
+
+.faq {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.faq a {
+        background: radial-gradient(circle, var(--goud), var(--bruin));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+
+.faq-item {
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid var(--goud);
+    transition: padding 0.3s ease;
+}
+
+.faq-question {
+    font-size: 20px;
+    font-family: "Merriweather", sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.faq-item:hover {
+    padding-left: 0.25em;
+}
+
+.faq-item:hover .icon path {
+    stroke: var(--licht-groen);
+}
+
+
+.faq-answer {
+    font-size: 16px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    max-width: 800px;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.faq-question.open + .faq-answer {
+    padding: 10px;
+}
+
+/* Plusje stijl */
+.faq-question .icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.open .icon {
+    transform: rotate(45deg); /* Draai het icoon 45 graden */
+}
+
+.faq-question.open .icon path {
+    stroke: var(--goud);
+}
+
+.icon path {
+    transition: stroke 0.5s ease;
+}
+
+/* SVG-icoon stijl */
+svg.icon {
+    width: 30px;
+    height: 30px;
+}
+
+
