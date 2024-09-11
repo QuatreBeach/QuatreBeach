@@ -1,11 +1,6 @@
 console.log('Script: Groet');
 
 // GROET
-// Haal de huidige datum en tijd op
-const now = new Date();
-const today = now.getDay();
-const hours = now.getHours();
-const time = now.getHours();
 let greet;
 
 if (time >= 18) {
@@ -19,4 +14,4 @@ if (time >= 18) {
 }
 
 // document.getElementById("groet").textContent = greet;
-document.getElementById("groet-welkom").textContent = `${greet}, welkom bij`;
+document.getElementById("groet").textContent = greet;

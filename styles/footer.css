@@ -5,17 +5,20 @@ footer {
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-column-gap: 10em;
     grid-row-gap: 5em;
-    width: 100%; /* Zorgt ervoor dat de grid de volledige breedte gebruikt */
+    justify-content: space-between;
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    max-width: 250px;
+    /* max-width: 250px; */
+    min-width: 300px;
 }
 
 .footer-items {
@@ -27,7 +30,27 @@ footer {
     margin: 0; /* Verwijdert eventuele standaard margin */
 }
 
-@media screen and (min-width: 1390px) {
+
+@media screen and (max-width: 1400px) {
+    .footer-grid {
+        grid-column-gap: 2.5em;
+        grid-row-gap: 3em;
+        justify-content: space-around;
+    }
+    
+    .footer-container {
+        /* max-width: 250px; */
+        min-width: 300px;
+        gap: 0.5em;
+    }
+
+    .footer-items {
+        gap: 0.75em;
+    }
+}
+
+
+/* @media screen and (min-width: 1390px) {
     .footer-grid {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
@@ -42,7 +65,7 @@ footer {
     .footer-container {
         max-width: 350px;
     }
-}
+} */
 
 
 footer a {
@@ -61,6 +84,10 @@ footer a {
     top: 50%; /* Centreert de pijl verticaal */
     transform: translateY(-50%); /* Corrigeert de verticale centrering */
     font-size: 1.2em; /* Grootte van de pijl */
+}
+
+.footer-grid .nieuwsbrief::after {
+    right: 20px; /* Zorgt ervoor dat de pijl goed zichtbaar is aan de rechterkant */
 }
 
 footer a:hover {

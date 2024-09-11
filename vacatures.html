@@ -4,27 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Evenementen | QuatreBeach</title>
+	<title>Vacatures | QuatreBeach</title>
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/header.css" rel="stylesheet">
 	<link href="styles/footer.css" rel="stylesheet">
-	<link href="styles/restaurant.css" rel="stylesheet">
+	<link href="styles/vacatures.css" rel="stylesheet">
 	<link href="styles/agenda.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
 
 	<script defer src="scripts/script.js"></script>
-	<script defer src="scripts/events-home.js"></script>
 	<script defer src="scripts/header.js"></script>
-	<script defer src="scripts/restaurant.js"></script>
+	<script defer src="scripts/vacatures.js"></script>
 	<script defer src="scripts/variabelen/openingstijden.js"></script>
-	<script defer src="scripts/variabelen/maand.js"></script>
-	<script defer src="scripts/variabelen/groet.js"></script>
 
 	<div class="zc-widget-config" data-restaurant="368690"></div>
 </head>
 
-<body id="pagina-restaurant">
+<body id="pagina-vacatures">
 
 	<header class="site-header">
 		<div class="container">
@@ -45,7 +42,7 @@
 								<li><a href="agenda.html">Agenda</a></li>
 								<li><a href="over-ons.html">Over ons</a></li>
 								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="vacatures.html">Vacatures</a></li>
+								<li id="current-page"><a href="vacatures.html">Vacatures</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -72,11 +69,11 @@
 		<div class="sidebar-content">
 			<nav>
 				<ul class="sidebar-nav">
-					<li id="current-page"><a href="restaurant.html">Restaurant</a></li>
+					<li><a href="restaurant.html">Restaurant</a></li>
 					<li class="sub-li"><a href="agenda.html">Agenda</a></li>
 					<li class="sub-li"><a href="over-ons.html">Over ons</a></li>
 					<li class="sub-li"><a href="faq.html">FAQ</a></li>
-					<li class="sub-li"><a href="vacatures.html">Vacatures</a></li>
+					<li id="current-page" class="sub-li"><a href="vacatures.html">Vacatures</a></li>
 					<li><a href="evenementen.html">Evenementen</a></li>
 				</ul>
 			</nav>
@@ -89,131 +86,76 @@
 
 		<div id="welkom-wrapper">
 			<div>
-				<h1>Restaurant</h1>
-				<p id="groet">Maand</p>
+				<h1>Vacatures</h1>
+				<p>Versterk ons team!</p>
 			</div>
 
 		</div>
 
-		<section id="menu">
+		<section id="event-roller">
 
-			<h2>Menu</h2>
+		<div class="event-roller">
+			<h2 class="sentence"><span class="break1">Wordt onze nieuwe</span> <span class="word-wrapper"><span id="rotating-word" class="word">collega</span></span></h2>
+		</div>
 
-			<section class="menu-grid">
+		<p>QuatreBeach is een gastvrij bedrijf waar wij mensen willen helpen en gasten blij willen maken! Dit geldt niet alleen voor onze gasten, maar zeker ook voor ons personeel. Wanneer je bij ons werkt mag je dus van ons verwachten dat wij alles zullen doen om jou zo goed mogelijk te begeleiden. Ben of ken jij iemand die bij ons zou willen werken? Bekijk de vacatures hieronder.</p>
 
-			<a href="/assets/Huisregels.pdf" target="_blank">
-				<article>
-					<h3>Lunch</h3>
-					<p>Bekijk Lunchkaart</p>
-				</article>
-			</a>
+	</section>
 
-			<a>
-				<article>
-					<h3>Diner</h3>
-					<p>Bekijk Dinerkaart</p>
-				</article>
-			</a>
+		<section id="vacatures">
 
-			<a>
-				<article>
-					<h3>Borrel</h3>
-					<p>Bekijk Dinerkaart</p>
-				</article>
-			</a>
 
-			</section>
+				<h2>Vacatures</h2>
+
+				<section class="events-list">
+					<!-- Template voor een evenement -->
+					<article class="event">
+						<div class="event-image">
+						  <img src="images/achtergronden/tiktok.jpg" alt="">
+						</div>
+						<div class="event-text">
+						  <div>
+							<h4></h4>
+							<p class="event-date-time">Fulltime & Parttime</p>
+							<p class="event-description">We zijn opzoek naar toppers voor achter de bar. Werk in een hecht en gezellig team op een plek waar heel het dorp en omstreken samenkomt. Ervaring is hiervoor niet vereist. Ben jij enthousiast en gemotiveerd? Neem dan snel contact met ons op!</p>
+						  </div>
+						  <a href="mailto:isabella@quatrebeach.nl" class="reserve-button"><button>Neem contact op</button></a>
+						</div>
+					</article>
+
+					<article class="event">
+						<div class="event-image">
+						  <img src="images/achtergronden/keuken.jpeg" alt="">
+						</div>
+						<div class="event-text">
+						  <div>
+							<h4></h4>
+							<p class="event-date-time">Fulltime & Parttime</p>
+							<p class="event-description">Wij zijn op zoek naar personen met een passie voor koken die kunnen helpen in onze keuken op parttime en fulltime basis. Ervaring is hiervoor niet vereist. Ben jij enthousiast, gemotiveerd en wil je werken in een hecht team? Kom dan bij ons werken!</p>
+						  </div>
+						  <a href="mailto:isabella@quatrebeach.nl" class="reserve-button"><button>Neem contact op</button></a>
+						</div>
+					</article>
+
+					<article class="event">
+						<div class="event-image">
+						  <img src="images/achtergronden/bediening.jpeg" alt="">
+						</div>
+						<div class="event-text">
+						  <div>
+							<h4></h4>
+							<p class="event-date-time">Fulltime & Parttime</p>
+							<p class="event-description">We zijn opzoek naar toppers voor in de bediening. Werk in een hecht en gezellig team op een plek waar heel het dorp en omstreken samenkomt. Ervaring is hiervoor niet vereist. Ben jij enthousiast en gemotiveerd? Kom dan werken bij QuatreBeach!</p>
+						  </div>
+						  <a href="mailto:isabella@quatrebeach.nl" class="reserve-button"><button>Neem contact op</button></a>
+						</div>
+					</article>
+
+
+				  
+				  
 
 		</section>
-
-
-		<section id="events-home">
-
-			<div class="agenda-flex">
-				<h2>Agenda</h2>
-				<a href="agenda.html" class="button-desktop"><button class="button-groen">Bekijk de volledige
-						agenda</button></a>
-			</div>
-
-			<section id="evenementen" class="onderdeel">
-				<section id="events">
-					<!-- Template voor een evenement -->
-					<template id="event-template">
-						<div class="event">
-							<div class="event-image">
-								<img src="" alt="">
-							</div>
-							<div class="event-text">
-								<div class="now-live" style="display:none;">
-									<span class="dot"></span> Nu bezig
-								</div>
-								<div>
-									<h4></h4>
-									<p class="event-date-time"></p>
-									<p class="event-description"></p>
-								</div>
-								<a class="reserve-button" data-zc-action="open"><button
-										data-zc-action="open">Reserveren</button></a>
-							</div>
-						</div>
-					</template>
-
-					<div id="events-sections">
-						<section id="today-events">
-							<h3>Eerstvolgende in <span id="maand"></span></h3>
-							<div class="events-list"></div> <!-- Nieuwe div voor evenementen van vandaag -->
-						</section>
-						<a href="agenda.html" class="button-mobile"><button class="button-groen">Bekijk de volledige
-								agenda</button></a>
-					</div>
-
-					<div id="geen-events">
-						<h3 id="maand3">Geen geplande evenementen</h3>
-						<a href="index.html">
-							<h4>Kom later terug</h4>
-							<p>Momenteen staan er geen evenementen op de planning. Houd onze Insta & Facebook in de
-								gaten voor de laatste nieuwtjes.</p>
-						</a>
-					</div>
-
-				</section>
-			</section>
-			</section>
-
-
-			<section id="menu">
-
-				<div>
-				<h2>Reserveren</h2>
-				<h3 id="open-tekst2">Reserveer bij QuatreBeach</h3>
-			</div>
-	
-				<section class="menu-grid reserveergrid">
-
-					<a id="reserveren-link">
-						<article data-zc-action="open">
-						  <h3>Reserveren</h3>
-						  <p id="reserveren-tekst">Groepen tot 16 personen</p>
-						</article>
-					  </a>
-					  
-	
-				<a href="evenementen.html">
-					<article>
-						<h3>Groepsreservering</h3>
-						<p>Groepen groter dan 16 personen</p>
-					</article>
-				</a>
-	
-				</section>
-	
-			</section>
-
-
-
-
-
-
 
 	</main>
 
@@ -321,6 +263,15 @@
 
 
 	</footer>
+
+
+
+	<p id="maand">Maand</p>
+	<p id="groet">Maand</p>
+	<p id="groet-welkom">Maand</p>
+	<p id="maand2">Maand</p>
+
+
 
 
 

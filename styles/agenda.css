@@ -9,7 +9,7 @@
 }
 
 .event-date-time {
-    font-family: "Merriweather", serif;
+    font-family: "Merriweather",2 serif;
     font-size: 18px;
     color: var(--goud);
 }
@@ -207,4 +207,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#pagina-restaurant #maand {
+    text-transform: lowercase;
 }
