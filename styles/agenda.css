@@ -130,7 +130,7 @@
 
 .event-description {
     margin: 10px 0;
-    color: var(--tekst-donker);
+    color: var(--zwart);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

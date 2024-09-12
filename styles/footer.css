@@ -76,6 +76,7 @@ footer a {
     transition: color 0.25s ease, scale 0.25s ease;
     font-size: 18px;
     font-weight: 600px;
+    color: var(--zwart);
 }
 
 .footer-grid a::after {
@@ -144,6 +145,7 @@ table {
 }
 
 th, td {
+    color: var(--zwart);
     padding: 8px 8px 8px 0;
     text-align: left;
     border-bottom: 0.5px solid #D4AF37; /* Gouden kleur */

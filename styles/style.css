@@ -40,6 +40,7 @@
 	--beige: #FFF4E0;
 	--rood: #BA5737;
 	--wit: white;
+	--zwart: black;
 	--licht-groen: #718355;
 
 	--font-tekst: 14px;
@@ -58,6 +59,7 @@
 p {
 	font-family: "Montserrat", sans-serif;
 	font-size: var(--font-tekst);
+	color: var(--zwart)
 }
 
 h1 {
@@ -106,7 +108,7 @@ section > div h3 {
 }
 
 body {
-	background: linear-gradient(to bottom, var(--achtergrond), white);
+	background: linear-gradient(to bottom, var(--beige), var(--wit));
 	transition: padding 1s ease;
 
 }
@@ -382,23 +384,33 @@ button {
 
 
 
-/* 
-@media (prefers-color-scheme:dark) {
+
+/* @media (prefers-color-scheme:dark) {
 
 	:root {
-		--achtergrond: rgb(2, 28, 2);
-		--tekst-donker: var(--beige);
+		--achtergrond-tint: rgba(255, 255, 255, 0.946);
 		--h-zwart: white;
-		--h3-kleur-donker: rgb(221, 0, 66);
-		--h3-kleur-port: #bf16fc;
-		--h3-kleur-donker-port: #0b054c;
-
-		--grid-kleur: #000000;
-		--grid-shadow: #ffb3005e;
+		--h3-kleur: blue;
+		--h3-kleur-donker: magenta;
+	
+		--goud: #D4AF37;
+		--bruin: #C9932E;
+		--groen: #FFF4E0;
+		--beige: #173330;
+		--rood: #BA5737;
+		--wit: black;
+		--licht-groen: #718355;
+		--zwart: white;
+	
+		--font-tekst: 14px;
+	
+		--hover-bg: rgba(245, 245, 220, 0.255);
 
 	}
 
 } */
+
+
 
 
 
