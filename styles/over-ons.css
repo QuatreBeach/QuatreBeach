@@ -82,15 +82,18 @@ strong {
 }
 
 
-#pagina-over-ons .menu-grid a:nth-of-type(1) article {
+#pagina-over-ons .menu-grid a:nth-of-type(1) article,
+#pagina-agenda .menu-grid a:nth-of-type(1) article  {
     background-image: url('../images/achtergronden/insta.jpg');
 }
 
-#pagina-over-ons .menu-grid a:nth-of-type(2) article {
+#pagina-over-ons .menu-grid a:nth-of-type(2) article,
+#pagina-agenda .menu-grid a:nth-of-type(2) article  {
     background-image: url('../images/achtergronden/facebook.jpg');
 }
 
-#pagina-over-ons .menu-grid a:nth-of-type(3) article {
+#pagina-over-ons .menu-grid a:nth-of-type(3) article,
+#pagina-agenda .menu-grid a:nth-of-type(3) article  {
     background-image: url('../images/achtergronden/tiktok.jpg');
 }
 

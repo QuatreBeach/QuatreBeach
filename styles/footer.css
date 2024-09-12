@@ -2,6 +2,7 @@ footer {
     background-color: var(--beige);
     padding-top: 3em;
     padding-bottom: 3em;
+    margin-top: 3em;
 }
 
 .footer-grid {
