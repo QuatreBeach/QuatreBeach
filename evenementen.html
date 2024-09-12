@@ -13,7 +13,6 @@
 	<link href="styles/evenementen.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
 
-	<script defer src="scripts/script.js"></script>
 	<script defer src="scripts/header.js"></script>
 	<script defer src="scripts/evenementen.js"></script>
 	<script defer src="scripts/variabelen/openingstijden.js"></script>
@@ -33,26 +32,24 @@
 				<nav>
 					<ul class="nav-main">
 						<li><a href="restaurant.html">Restaurant</a></li>
-						<li><a href="evenementen.html">Evenementen</a></li>
+						<li id="current-page"><a href="evenementen.html">Evenementen</a></li>
 					</ul>
 				</nav>
 				<div class="container-sub-nav">
 					<div class="sub-nav">
 						<nav>
 							<ul class="nav-sub">
-								<li><a href="agenda.html">Ruimtes</a></li>
-								<li><a href="over-ons.html">Over ons</a></li>
-								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="vacatures.html">Contact</a></li>
+								<li><a href="evenementen.html#ruimtes">Ruimtes</a></li>
+								<li><a href="evenementen.html#contact">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</div>
 			<div class="q-links">
-				<a class="button-beige" data-zc-action="open">
-					<button data-zc-action="open">Reserveren</button>
-					<p id="open-tekst" class="open" data-zc-action="open">Reserveer een tafel</p>
+				<a href="restaurant.html#reserveren" class="button-beige">
+					<button>Reserveren</button>
+					<p id="open-tekst" class="open">Reserveer een tafel</p>
 				</a>
 			</div>
 		</div>
@@ -105,7 +102,7 @@
 
 	</section>
 
-		<section id="evenementen" class="onderdeel">
+		<section id="ruimtes">
 
 			<section id="menu">
 
@@ -144,10 +141,45 @@
 				  
 
 		</section>
+		</section>
+
+		<section id="contact">
+
+			<div>
+			<h2>Contact</h2>
+			<h3>Neem contact met ons op</h3>
+		</div>
+
+			<section class="menu-grid contactgrid">
+
+				<a href="mailto:evenementen@quatrebeach.nl" target="_blank">
+					<article>
+					  <h3>Mailen</h3>
+					  <p>evenementen@quatrebeach.nl</p>
+					</article>
+				  </a>
+				  
+
+			<a href="tel:+31614665570" target="_blank">
+				<article>
+					<h3>Bellen</h3>
+					<p>+31 6 15 66 55 70</p>
+				</article>
+			</a>
+
+			<a href="" target="_blank">
+				<article>
+					<h3>Brochure</h3>
+					<p>Download onze brochure</p>
+				</article>
+			</a>
+
+			</section>
+		
 
 	</main>
 
-	<footer>
+	<footer id="footer">
 
 		<section class="footer-grid">
 
@@ -165,7 +197,7 @@
 			<div class="footer-container">
 				<h3>Informatie</h3>
 				<div class="footer-items">
-					<a data-zc-action="open">Reserveren</a>
+					<a href="restaurant.html#reserveren">Reserveren</a>
 					<a href="agenda.html">Agenda</a>
 					<a href="faq.html">Veelgestelde vragen</a>
 					<a href="assets/Huisregels.pdf" target="_blank">Huisregels</a>
@@ -251,15 +283,6 @@
 
 
 	</footer>
-
-
-
-	<p id="maand">Maand</p>
-	<p id="groet">Maand</p>
-	<p id="groet-welkom">Maand</p>
-	<p id="maand2">Maand</p>
-
-
 
 
 

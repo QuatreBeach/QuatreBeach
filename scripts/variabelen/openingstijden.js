@@ -1,5 +1,11 @@
 console.log('Script: Openingstijden');
 
+// Haal de huidige datum en tijd op
+const now = new Date();
+const today = now.getDay();
+const hours = now.getHours();
+const time = now.getHours();
+
 // Speciale behandeling voor zaterdag en zondag tussen 00:00 en 1:00
 let adjustedToday = today;
 if ((today === 0 || today === 6) && hours < 1) {

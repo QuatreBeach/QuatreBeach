@@ -91,7 +91,6 @@ header .container-sub-nav {
 .site-header .container nav ul li a {
     color: var(--goud);
     font-family: "Merriweather", sans-serif;
-    text-decoration: none;
     font-size: 18px;
     transition: color 0.5s ease;
 }
@@ -108,7 +107,6 @@ header .container-sub-nav {
 .site-header .container-sub-nav nav ul li a {
     color: var(--beige);
     font-family: "Merriweather", sans-serif;
-    text-decoration: none;
     font-size: 16px;
     transition: color 0.5s ease;
 }
@@ -230,6 +228,10 @@ header .container-sub-nav {
 
 .sidebar .open {
     font-size: 14px;
+}
+
+.nav-main #current-page {
+    text-decoration: underline var(--goud);
 }
 
 #sidebar #current-page {

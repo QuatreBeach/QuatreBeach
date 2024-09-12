@@ -14,7 +14,7 @@
 	<link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
 
 	<script defer src="scripts/script.js"></script>
-	<script defer src="scripts/events-home.js"></script>
+	<script defer src="scripts/agenda-home.js"></script>
 	<script defer src="scripts/header.js"></script>
 	<script defer src="scripts/restaurant.js"></script>
 	<script defer src="scripts/variabelen/openingstijden.js"></script>
@@ -34,7 +34,7 @@
 			<div class="nav">
 				<nav>
 					<ul class="nav-main">
-						<li><a href="restaurant.html">Restaurant</a></li>
+						<li id="current-page"><a href="restaurant.html">Restaurant</a></li>
 						<li><a href="evenementen.html">Evenementen</a></li>
 					</ul>
 				</nav>
@@ -101,24 +101,24 @@
 
 			<section class="menu-grid">
 
-			<a href="/assets/Huisregels.pdf" target="_blank">
+			<a href="/assets/Site Lunch.pdf" target="_blank">
 				<article>
 					<h3>Lunch</h3>
 					<p>Bekijk Lunchkaart</p>
 				</article>
 			</a>
 
-			<a>
+			<a href="/assets/Site Diner.pdf" target="_blank">
 				<article>
 					<h3>Diner</h3>
 					<p>Bekijk Dinerkaart</p>
 				</article>
 			</a>
 
-			<a>
+			<a href="/assets/Site Borrel.pdf" target="_blank">
 				<article>
 					<h3>Borrel</h3>
-					<p>Bekijk Dinerkaart</p>
+					<p>Bekijk Borrelkaart</p>
 				</article>
 			</a>
 
@@ -169,10 +169,9 @@
 
 					<div id="geen-events">
 						<h3 id="maand3">Geen geplande evenementen</h3>
-						<a href="index.html">
+						<a href="over-ons.html#socials">
 							<h4>Kom later terug</h4>
-							<p>Momenteen staan er geen evenementen op de planning. Houd onze Insta & Facebook in de
-								gaten voor de laatste nieuwtjes.</p>
+							<p>Momenteel staan er geen evenementen op de planning. Houd onze Insta & Facebook in de gaten voor het laatste nieuws.</p>
 						</a>
 					</div>
 
@@ -181,7 +180,7 @@
 			</section>
 
 
-			<section id="menu">
+			<section id="reserveren">
 
 				<div>
 				<h2>Reserveren</h2>
@@ -217,7 +216,7 @@
 
 	</main>
 
-	<footer>
+	<footer id="footer">
 
 		<section class="footer-grid">
 

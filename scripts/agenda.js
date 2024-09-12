@@ -4,12 +4,12 @@ const range = 'Agenda!A2:E'; // Aangepast naar jouw range, beginnend vanaf A2
 
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const todaySection = document.getElementById('today-events');
   const thisMonthSection = document.getElementById('this-month-events');
   const laterSection = document.getElementById('later-events');
   const noEventsSection = document.getElementById('geen-events'); // Fallback voor geen evenementen
-  
+
   // Verwijder eventuele bestaande evenement-content in de secties
   todaySection.querySelector('.events-list').innerHTML = '';
   thisMonthSection.querySelector('.events-list').innerHTML = '';
@@ -41,9 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
         template.querySelector('.event-description').textContent = text;
 
         // Formeer het pad voor de afbeelding
-        const imageUrl = `images/agenda/${imageName}`;
+        const imageUrl = `images/agenda/${imageName}.png`;
         template.querySelector('.event-image img').src = imageUrl;
         template.querySelector('.event-image img').alt = name;
+
 
         const reserveButton = template.querySelector('.reserve-button');
 
@@ -112,7 +113,7 @@ function formatDate(dateString) {
   ];
 
   const monthIndex = parseInt(month, 10) - 1; // Maandindex, -1 omdat arrays 0-gebaseerd zijn
-  
+
   if (monthIndex >= 0 && monthIndex < months.length) {
     return `${parseInt(day, 10)} ${months[monthIndex]}`; // Alleen dag en maand
   } else {
@@ -129,7 +130,7 @@ function formatForURL(date) {
   return `${year}-${month}-${day}`;
 }
 
-document.getElementById('reserveren-link').addEventListener('click', function(event) {
+document.getElementById('reserveren-link').addEventListener('click', function (event) {
   event.preventDefault(); // Voorkom de standaardactie als dat nodig is
   document.getElementById('reserveren-tekst').textContent = "Ga verder in de reserveringswidget";
 });

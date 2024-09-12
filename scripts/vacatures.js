@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const words = ["collega", "chef", "barman", "barvrouw", 'keukenhulp', 'bediening', "gastheer", "gastvrouw", 'zomertopper'];
+    const words = ["collega", "chef", "barman", "barvrouw", 'keukenhulp', 'bediening', "gastheer", "gastvrouw", 'topper'];
     let currentIndex = 0;
     const rotatingWordElement = document.getElementById('rotating-word');
     const wordWrapper = rotatingWordElement.parentElement;
