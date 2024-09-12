@@ -47,7 +47,7 @@
 }
 
 #today-events .event-image {
-    height: 100%;
+    height: 400px;
 }
 
 .event .event-image img {
@@ -61,6 +61,7 @@
     /* Zorgt ervoor dat het midden van de afbeelding wordt getoond bij het croppen */
     display: block;
     /* Voorkomt ongewenste whitespace onder de afbeelding */
+    
 }
 
 
@@ -69,10 +70,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Zorgt ervoor dat de reserveringsknop onderaan blijft */
+    gap: 0.5em;
     padding: 15px;
     flex-grow: 1;
-    /* Voeg deze regel toe */
 }
 
 #today-events .event-text {
@@ -92,6 +92,7 @@
     max-width: 100px;
     font-family: "Merriweather", serif;
     font-size: 14px;
+    margin-bottom: 0.5em;
 }
 
 .now-live .dot {

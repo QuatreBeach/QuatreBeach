@@ -295,7 +295,7 @@ button {
 @media (max-width: 1200px) {
 	#welkom-wrapper {
 		background-attachment: scroll;
-		background-size: 150%; /* Verklein de achtergrond op mobiel */
+		background-size: 250%; /* Verklein de achtergrond op mobiel */
 	}
 }
 

@@ -9,14 +9,14 @@
 }
 
 .menu-grid article {
-    height: 25vh;
+    height: 20vh;
     border-radius: 25px;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 0.5em;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -115,6 +115,19 @@
         font-size: 30px;
         margin-bottom: 0;
     }
+
+
+}
+
+
+@media screen and (max-width: 695px) {
+
+    #pagina-restaurant .events-list > div:last-of-type {
+        display: none;
+        background-color: red;
+    }
+
+
 }
 
 .menu-grid.reserveergrid a:nth-of-type(1) article {
