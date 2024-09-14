@@ -75,7 +75,7 @@ function createOverlay(title, capacity, description) {
 function openOverlay(title, description, capacity) {
   document.getElementById('overlay-title').textContent = title;
   document.getElementById('overlay-description').textContent = description;
-  document.getElementById('overlay-capacity').textContent = `Ruimte voor maximaal ${capacity} personen`;
+  document.getElementById('overlay-capacity').textContent = `Groepen tot ${capacity} personen`;
 
   // Leeg de foto's sectie
   const overlayFotos = document.getElementById('overlay-fotos');

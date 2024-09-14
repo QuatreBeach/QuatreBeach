@@ -16,7 +16,7 @@ document.getElementById('reserveren-link').addEventListener('click', function(ev
   
   // Maak een array met de URL's van de achtergrondafbeeldingen
 const backgrounds = [
-  '../images/achtergronden/restaurant/1.jepg',
+  '../images/achtergronden/restaurant/1.jpeg',
   '../images/achtergronden/restaurant/2.jpg',
   '../images/achtergronden/restaurant/3.jpg',
   '../images/achtergronden/restaurant/4.jpg',

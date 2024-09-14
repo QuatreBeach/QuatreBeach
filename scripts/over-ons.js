@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const folderPath = 'images/impressie/'; // Pad naar de map met afbeeldingen
-const numberOfImages = 10; // Aantal afbeeldingen in de map
+const numberOfImages = 47; // Aantal afbeeldingen in de map
 const fotoGrid = document.getElementById('fotoGrid');
 
 // Functie om afbeeldingen dynamisch toe te voegen

@@ -46,7 +46,7 @@
   
   .close-btn {
     position: absolute;
-    top: 1.5em;
+    top: 1.75em;
     right: 1.5em;
     font-size: 24px;
     cursor: pointer;
@@ -68,12 +68,20 @@
   .overlay-title {
     display: flex;
     justify-content: space-between;
+
   }
+
+.hyphen::after {
+    content: '-'; /* Voeg een streepje toe waar woorden gebroken worden */
+}
+
 
   .overlay-title h3 {
     font-size: 40px;
     margin: 0;
+    max-width: 55vw;
   }
+  
 
   #overlay-capacity {
     margin-bottom: 2em;
@@ -139,8 +147,11 @@
 
       .overlay-buttons {
         display: flex;
-        flex-wrap: wrap;
         gap: 1em;
+      }
+
+      .overlay-buttons .button-groen {
+        padding: 10px 30px;
       }
 
       .overlay-buttons a:first-of-type {
