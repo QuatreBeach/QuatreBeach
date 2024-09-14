@@ -386,7 +386,7 @@ button {
 
 
 
-@media (prefers-color-scheme:dark) {
+/* @media (prefers-color-scheme:dark) {
 
 	:root {
 		--achtergrond-tint: rgba(255, 255, 255, 0.946);
@@ -409,7 +409,7 @@ button {
 
 	}
 
-}
+} */
 
 
 

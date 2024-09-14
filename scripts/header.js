@@ -1,15 +1,22 @@
 let lastScrollTop = 0; // Houdt de vorige scrollpositie bij
 const header = document.querySelector('header'); // Selecteert de eerste header op de pagina
 const scrollThreshold = 100; // Hoogte waarop de achtergrondkleur moet veranderen
+const minWidth = 800; // Minimum breedte van het scherm waarop de achtergrondkleur wordt toegepast
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     
-    if (currentScroll > scrollThreshold) {
-        // Voeg achtergrondkleur toe als je verder dan scrollThreshold hebt gescrold
-        header.style.backgroundColor = 'var(--groen)'; // Kies een kleur en transparantie die bij je ontwerp past
+    // Controleer of het scherm groter is dan 800px
+    if (window.innerWidth > minWidth) {
+        if (currentScroll > scrollThreshold) {
+            // Voeg achtergrondkleur toe als je verder dan scrollThreshold hebt gescrold
+            header.style.backgroundColor = 'var(--groen)'; // Kies een kleur en transparantie die bij je ontwerp past
+        } else {
+            // Verwijder achtergrondkleur als je minder dan scrollThreshold hebt gescrold
+            header.style.backgroundColor = 'transparent';
+        }
     } else {
-        // Verwijder achtergrondkleur als je minder dan scrollThreshold hebt gescrold
+        // Zorg dat de achtergrondkleur altijd transparant is op kleinere schermen
         header.style.backgroundColor = 'transparent';
     }
     
@@ -23,8 +30,9 @@ window.addEventListener('scroll', () => {
         header.style.opacity = '1'; // Toont de header
     }
     
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Voor mobiel scrolen
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Voor mobiel scrollen
 });
+
 
 
 // MOBIEL MENU

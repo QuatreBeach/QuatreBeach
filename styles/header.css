@@ -22,6 +22,13 @@
 
 }
 
+@media (max-width: 800px) {
+    .site-header { 
+        background-color: none;
+    }
+}
+
+
 @media (min-width: 1600px) {
     .site-header {
 
@@ -133,14 +140,21 @@ header .container-sub-nav {
     display: none; /* Verborgen op grotere schermen */
     cursor: pointer;
     position: fixed; /* Fixed positioning */
-    top: 30px; /* Ruimte van de bovenkant */
-    right: 30px; /* Ruimte van de rechterkant */
+    top: 20px; /* Ruimte van de bovenkant */
+    right: 20px; /* Ruimte van de rechterkant */
     z-index: 1100; /* Zorg ervoor dat het boven de sidebar ligt */
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height:25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--groen);
+    padding: 1em;
+    border-radius: 50%;
+}
+
+.menu-toggle.open {
+    background-color: transparent;
 }
 
 .menu-toggle span {
@@ -156,8 +170,10 @@ header .container-sub-nav {
     background-color: var(--goud); /* Kleur van de lijnen */
     transform: rotate(45deg);
     position: relative;
-    top: 15px;
+    right: 3px;
+    top: 10px;
     height: 5px;
+    width: 30px;
 }
 
 .menu-toggle.open span:nth-child(2) {
@@ -168,8 +184,10 @@ header .container-sub-nav {
     background-color: var(--goud); /* Kleur van de lijnen */
     transform: rotate(-45deg);
     position: relative;
+    right: 3px;
     top: -10px;
     height: 5px;
+    width: 30px;
 }
 
 /* Sidebar menu voor mobiel */
