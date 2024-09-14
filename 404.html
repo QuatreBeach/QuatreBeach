@@ -1,131 +1,64 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisselend Woord Carrousel</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+    <title>Pagina niet gevonden | QuatreBeach Lijnden</title>
+    <meta name="description" content="Kom langs bij QuatreBeach voor een hapje, drankje en gezelligheid in het Gemaal van Lijnden. Bekijk ons menu, maak een reservering bij het beste restaurant van Lijnden, Badhoevedorp en omstreken. Zien we jou snel?">
+	<meta name="keywords" content="Lijnden, Badhoevedorp, QBeach, Menu">
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/welkom.css" rel="stylesheet">
+    <link href="styles/restaurant.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/huisstijl/favicon.ico">
 
-        h2 {
-            font-family: "Merriweather", serif;
-  font-weight: 600;
-  font-style: normal;
-          font-size: 40px;
-        }
-        .container {
-            text-align: center;
-        }
-        .sentence {
-            display: inline-block;
-            white-space: nowrap;
-        }
-        .word-wrapper {
-            display: inline-block;
-            position: relative;
-            vertical-align: middle;
-            overflow: hidden;
-            height: 1.75em; /* Hoogte van de tekstregel */
-            transition: width 0.5s ease-in-out; /* Smooth transition for width */
-        }
-        .word {
-            display: inline-block;
-            color: #BA5737;
-            background-color: rgba(255, 102, 6, 0.1); /* Light background color */
-            border-radius: 50px;
-            padding: 0.25em 0.5em;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: slideUp 2s infinite;
-            white-space: nowrap;
-            transition: width 0.5s ease-in-out;
-        }
-        @keyframes slideUp {
-            0% {
-                transform: translate(-50%, 100%);
-                opacity: 0;
-            }
-            25% {
-                transform: translate(-50%, 0);
-                opacity: 1;
-            }
-            75% {
-                transform: translate(-50%, 0);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-50%, -100%);
-                opacity: 0;
-            }
-        }
-
-        @media screen and (max-width: 400px) {
-            .break1 {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        h2 {
-            font-size: 25px;
-        }
-        }
-    </style>
+    <script defer src="scripts/variabelen/groet-index.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h2 class="sentence"><span class="break1">Wordt onze nieuwe</span> <span class="word-wrapper"><span id="rotating-word" class="word">collega</span></span></h2>
+
+    <div class="video-container">
+        <video playsinline loop muted autoplay class="background-video">
+            <source src="videos/welkom.mp4" type="video/mp4">
+            Jouw browser ondersteunt geen video.
+        </video>
+
+        <div class="overlay-text">
+            <div>
+                <h1 class="quatrebeach">Pagina niet gevonden</h1>
+                <h2>Foutje? Ga naar een van de volgende pagina's</h2>
+            </div>
+
+            <section id="menu">
+	
+				<section class="menu-grid reserveergrid">
+
+					<a href="restaurant.html">
+						<article>
+						  <h3>Restaurant</h3>
+						  <p>Menu • Agenda • Reserveren</p>
+						</article>
+					  </a>
+					  
+	
+				<a href="evenementen.html">
+					<article>
+						<h3>Evenementen</h3>
+						<p>Ons aanbod voor jouw groep</p>
+					</article>
+				</a>
+	
+				</section>
+	
+			</section>
+        </div>
+
+
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const words = ["collega", "chef", "barman", "barvrouw", 'keukenhulp', 'bediening', 'zomertopper'];
-            let currentIndex = 0;
-            const rotatingWordElement = document.getElementById('rotating-word');
-            const wordWrapper = rotatingWordElement.parentElement;
-            let shownWords = [];
 
-            // Functie om een willekeurig woord te kiezen dat nog niet is getoond
-            function chooseNextWord() {
-                let nextIndex;
-                do {
-                    nextIndex = Math.floor(Math.random() * words.length);
-                } while (shownWords.includes(nextIndex));
 
-                shownWords.push(nextIndex);
-                if (shownWords.length === words.length) {
-                    shownWords = []; // Reset shownWords als alle woorden zijn getoond
-                }
-
-                return words[nextIndex];
-            }
-
-            // Stel het eerste woord en de breedte in bij het laden van de pagina
-            rotatingWordElement.textContent = words[currentIndex];
-            wordWrapper.style.width = rotatingWordElement.offsetWidth + 'px';
-            shownWords.push(currentIndex);
-
-            setInterval(() => {
-                // Kies het volgende woord
-                currentIndex = words.indexOf(chooseNextWord());
-                const nextWord = words[currentIndex];
-                rotatingWordElement.textContent = nextWord;
-                const newWidth = rotatingWordElement.offsetWidth;
-
-                // Stel de breedte van de wrapper in
-                wordWrapper.style.width = newWidth + 'px';
-
-                // Stel de huidige tekst terug en start de animatie opnieuw
-                rotatingWordElement.style.animation = 'none'; // Stop animatie tijdelijk
-                void rotatingWordElement.offsetHeight; // Trigger reflow
-                rotatingWordElement.style.animation = ''; // Start animatie opnieuw
-            }, 2000); // Tekst wisselt nu aan het einde van de animatiecyclus
-        });
-    </script>
 </body>
+
+
 </html>

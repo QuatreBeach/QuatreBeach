@@ -83,7 +83,7 @@ function openOverlay(title, description, capacity) {
 
   // Laad de afbeeldingen dynamisch uit de map
   const imageFolderPath = `images/evenementen/${encodeURIComponent(title)}/`;
-  const numberOfImages = 10; // Probeer 5 afbeeldingen te laden
+  const numberOfImages = 16; // Probeer 5 afbeeldingen te laden
 
   for (let i = 1; i <= numberOfImages; i++) {
     const imgSrc = `${imageFolderPath}image${i}.jpeg`;

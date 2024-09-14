@@ -1,6 +1,4 @@
-#pagina-restaurant #welkom-wrapper {
-	background-image: url('../images/achtergronden/restaurant.jpg');
-}
+
 
 .menu-grid {
     display: grid;
@@ -74,6 +72,7 @@
 .menu-grid p {
     color: var(--beige);
     font-size: 16px;
+    transition: scale 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 .menu-grid a:nth-of-type(1) article {
@@ -148,7 +147,7 @@
     }
 
     50% {
-        transform: scale(1.25);
+        transform: scale(1.15);
     }
 
     100% {

@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
 
           const formattedDate = formatForURL(event.date);
-          const bookingUrl = `https://bookings.zenchef.com/results?rid=368690&pid=1001&isPreview=1&day=${formattedDate}`;
+          const bookingUrl = `https://bookings.zenchef.com/results?rid=368690&day=${formattedDate}`;
           reserveButton.href = bookingUrl;
           reserveButton.target = '_blank'; // Open in een nieuwe tab
 

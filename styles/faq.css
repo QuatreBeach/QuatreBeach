@@ -1,5 +1,5 @@
 #pagina-faq #welkom-wrapper {
-	background-image: url('../images/achtergronden/evenementen-teaser.jpg');
+	background-image: url('../images/achtergronden/restaurant-teaser.jpg');
 }
 
 .faq h3 {
@@ -9,11 +9,10 @@
 .faq {
     max-width: 1600px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     /* flex-direction: column; */
     gap: 1em;
     margin-top: 2em;
-    justify-content: space-between;
 }
 
 .faq a {
@@ -43,11 +42,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    width: 600px;
-}
-
-.faq-question span {
-    max-width: 400px;
 }
 
 .faq-item:hover {
@@ -95,30 +89,17 @@ svg.icon {
     height: 30px;
 }
 
-@media (max-width: 1200px) {
-
-    .faq {
-        max-width: 1600px;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        margin-top: 2em;
-    }
-    
-    
-        .faq-question {
-            width: 100%;
-        }
-    
-        .faq-question span {
-            max-width: 60vw;
-        }
-
-}
-
 
 @media (max-width: 800px) {
 
+    .faq-answer {
+        max-width: 80vw;
+    }
+
+    
+    .faq-question span {
+        max-width: 60vw;
+    }
 
     .faq-question {
         font-size: 18px;

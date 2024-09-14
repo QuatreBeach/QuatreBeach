@@ -163,3 +163,23 @@ th {
 footer h3 {
     margin-top: 0;
 }
+
+.footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.footer-details p {
+    font-size: 10px;
+}
+
+.footer-details p:first-of-type {
+    opacity: 0;
+}
+
+.footer-details a {
+    font-size: 10px
+}

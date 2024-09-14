@@ -57,6 +57,10 @@ header .container {
     gap: 1em;
 }
 
+.q-links p {
+    color: var(--wit);
+}
+
 header .container-sub-nav {
     max-width: 90%;
     margin: 0 auto; /* Centreert de container */
@@ -231,7 +235,7 @@ header .container-sub-nav {
 }
 
 .nav-main #current-page {
-    text-decoration: underline var(--goud);
+    border-bottom: 1px solid var(--goud);
 }
 
 #sidebar #current-page {
@@ -241,10 +245,17 @@ header .container-sub-nav {
     background-clip: text;
     color: transparent;
     text-decoration: underline;
+    -webkit-text-decoration: underline;
+    text-decoration-skip-ink: none;
+
 }
 
 .sub-nav #current-page {
     text-decoration: underline;
+    -webkit-text-decoration: underline;
+
+    text-decoration-skip-ink: none;
+
 }
 
 

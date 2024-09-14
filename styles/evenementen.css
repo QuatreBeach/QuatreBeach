@@ -1,7 +1,10 @@
 #pagina-evenementen #welkom-wrapper {
-	background-image: url('../images/achtergronden/restaurant.jpg');
+	background-image: url('../images/achtergronden/groepsreservering.jpg');
 }
 
+#pagina-evenementen .menu-grid article {
+  height: 40vh;
+}
 
 .overlay {
     position: fixed;
@@ -227,7 +230,8 @@
     }
 }
 
-.menu-grid.contactgrid article {
+#pagina-evenementen .menu-grid.contactgrid article,
+#pagina-faq .menu-grid.contactgrid article {
   height: 15vh;
   border: solid var(--goud) 2px;
 }
@@ -236,7 +240,6 @@
 .menu-grid.contactgrid article p {
   color: var(--groen);
 }
-
 
 
 .menu-grid.contactgrid article::before {
@@ -249,4 +252,9 @@
 .menu-grid.contactgrid a:nth-of-type(3) article {
   background-image: none;
   ;
+}
+
+.menu-grid.contactgrid article:hover p {
+  color: var(--goud);
+  scale: 1.1;
 }

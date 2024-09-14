@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // Voeg reserverings-URL toe aan de knop met de juiste datum in YYYY-MM-DD-formaat
           const formattedDate = formatForURL(eventDate);
-          const bookingUrl = `https://bookings.zenchef.com/results?rid=368690&pid=1001&isPreview=1&day=${formattedDate}`;
+          const bookingUrl = `https://bookings.zenchef.com/results?rid=368690&day=${formattedDate}`;
           reserveButton.href = bookingUrl;
           reserveButton.target = '_blank'; // Open in een nieuwe tab
         }
