@@ -102,6 +102,21 @@
     animation-delay: 3s;
 }
 
+.menu-grid a:nth-of-type(4) {
+    animation: grow 2s ease-in-out;
+    animation-delay: 3.5s;
+}
+
+.menu-grid a:nth-of-type(5) {
+    animation: grow 2s ease-in-out;
+    animation-delay: 4s;
+}
+
+.menu-grid a:nth-of-type(6) {
+    animation: grow 2s ease-in-out;
+    animation-delay: 4.5s;
+}
+
 
 
 @media screen and (max-width: 800px) {
