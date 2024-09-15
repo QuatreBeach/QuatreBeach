@@ -1,4 +1,16 @@
+#pagina-restaurant #welkom-wrapper {
+  background-position: 0% -200px;
+}
 
+
+@media screen and (max-width: 1200px) {
+
+    #pagina-restaurant #welkom-wrapper {
+      background-position: 50% 0;
+    }
+  
+  }
+  
 
 .menu-grid {
     display: grid;

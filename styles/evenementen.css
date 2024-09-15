@@ -1,6 +1,20 @@
 #pagina-evenementen #welkom-wrapper {
 	background-image: url('../images/achtergronden/groepsreservering.jpg');
+  background-position: 0% -200px;
 }
+
+
+@media screen and (max-width: 1200px) {
+
+  #pagina-evenementen #welkom-wrapper {
+    background-position: center;
+  }
+
+}
+
+
+
+
 
 #pagina-evenementen .menu-grid article {
   height: 40vh;
